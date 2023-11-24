@@ -1,0 +1,6 @@
+# created by and for Mac OS
+**/.DS_Store
+
+# outputs from Rmd
+**/*.html
+

@@ -1,0 +1,19 @@
+name: BiomarkerWorkshop_2023_MOFA
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base
+  - r-psych
+  - r-tidyverse
+  - r-ggplot2
+  - r-data.table
+  - r-rmarkdown
+  - r-knitr
+  - r-survminer
+  - r-survival
+  - r-randomforest
+  - rstudio-desktop
+  - bioconductor-mofa2
+  - bioconductor-mofadata
+  - bioconductor-biocstyle

@@ -3,5 +3,7 @@
 
 # outputs from Rmd
 **/*.html
+**/*_files/
 
-.Rproj.user
+
+/.quarto/

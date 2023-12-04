@@ -1,0 +1,17 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base
+  - r-tidyverse=1.3.2
+
+  # Rmarkdown
+  - r-markdown
+  - r-kableextra
+  - r-janitor
+  - r-english
+
+  # machine learning
+  - r-randomforest
+  
+

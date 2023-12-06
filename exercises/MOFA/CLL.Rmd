@@ -30,6 +30,7 @@ library(MOFAdata)
 library(data.table)
 library(ggplot2)
 library(tidyverse)
+library(utils)
 ```
 
 Data is stored as a list of matrices. Features are stored in the rows and samples in the columns
@@ -139,13 +140,16 @@ MOFAobject <- prepare_mofa(MOFAobject,
 Train the model: this should take ~2min
 ```{r, message=FALSE, warning=FALSE}
 # NOTE: The software has evolved since the original publication and the results will not be 100% identical to the original publication, please use the pretrained model if you are running through the vignette for the fist time
-MOFAobject <- run_mofa(MOFAobject, outfile="MOFA2_CLL.hdf5", use_basilisk = TRUE)
-saveRDS(MOFAobject,"MOFA2_CLL.rds")
 
-MOFAobjectNew <- readRDS("MOFA2_CLL.rds")
+usePrecomputed <- TRUE #Change this if you want to run the computation yourself ... it will take some time
 
-# Load precomputed model
-MOFAobject <- readRDS(url("http://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/MOFA2_CLL.rds"))
+if(!usePrecomputed){
+  MOFAobject <- run_mofa(MOFAobject, outfile="MOFA2_CLL.hdf5", use_basilisk = TRUE)
+  saveRDS(MOFAobject,"MOFA2_CLL.rds")
+}else{
+  # Load precomputed model
+  MOFAobject <- readRDS(url("http://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/MOFA2_CLL.rds"))
+}
 ```
 
 
@@ -186,7 +190,6 @@ dim(MOFAobject@expectations$W$mRNA)
 The sample metadata must be provided as a data.frame and it must contain a column `sample` with the sample IDs. Make sure that the samples in the metadata match the samples in the model
 ```{r}
 samples_metadata(MOFAobject) <- CLL_metadata
-samples_metadata(MOFAobjectNew) <- CLL_metadata
 ```
 
 ## Correlation between factors
@@ -194,7 +197,6 @@ samples_metadata(MOFAobjectNew) <- CLL_metadata
 A good sanity check is to verify that the Factors are largely uncorrelated. In MOFA there are no orthogonality constraints such as in Principal Component Analysis, but if there is a lot of correlation between Factors this suggests a poor model fit. Reasons? Perhaps you used too many factors or perhaps the normalisation is not adequate.
 ```{r}
 plot_factor_cor(MOFAobject)
-plot_factor_cor(MOFAobjectNew)
 ```
 
 ## Plot variance decomposition
@@ -205,7 +207,6 @@ plot_factor_cor(MOFAobjectNew)
 
 ```{r}
 plot_variance_explained(MOFAobject, max_r2=15)
-plot_variance_explained(MOFAobjectNew, max_r2=15)
 ```
 
 What insights from the data can we learn just from inspecting this plot?  
@@ -227,7 +228,6 @@ A reasonable question is whether the model is providing a good fit to the data. 
 In this data set, using only K=15 factors the model explains up to ~54% of the variation in the Drug response and ~42% of the variation in the mRNA data. This is quite remarkable for a linear model.
 ```{r}
 plot_variance_explained(MOFAobject, plot_total = TRUE)[[2]]
-plot_variance_explained(MOFAobjectNew, plot_total = TRUE)[[2]]
 ```
 
 # Characterisation of Factor 1
@@ -248,10 +248,6 @@ correlate_factors_with_covariates(MOFAobject,
   covariates = c("Gender","died","age"), 
   plot="log_pval"
 )
-correlate_factors_with_covariates(MOFAobjectNew, 
-  covariates = c("Gender","died","age"), 
-  plot="log_pval"
-)
 ```
 
 Most Factors don't have a clear association with any of the covariates. Only Factor 11 has a small association with survival outcome. We will go back to associations with clinical information at the end of the vignette.
@@ -263,10 +259,6 @@ Each factor captures a different source of variability in the data. Mathematical
 
 ```{r}
 plot_factor(MOFAobject, 
-  factors = 1, 
-  color_by = "Factor1"
-)
-plot_factor(MOFAobjectNew, 
   factors = 1, 
   color_by = "Factor1"
 )
@@ -288,12 +280,6 @@ plot_weights(MOFAobject,
  nfeatures = 10,     # Top number of features to highlight
  scale = TRUE           # Scale weights from -1 to 1
 )
-plot_weights(MOFAobjectNew,
- view = "Mutations",
- factor = 1,
- nfeatures = 10,     # Top number of features to highlight
- scale = TRUE           # Scale weights from -1 to 1
-)
 ```
 
 Notice that most features lie at zero, indicating that most features have no association with Factor 1. There is however one gene that clearly stands out: IGHV (immunoglobulin heavy chain variable region). [This is the main clinical marker for CLL](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6355490/).  
@@ -301,12 +287,6 @@ Notice that most features lie at zero, indicating that most features have no ass
 An alternative visualistion to the full distribution of weights is to do a line plot that displays only the top features with the corresponding weight sign on the right:
 ```{r}
 plot_top_weights(MOFAobject,
- view = "Mutations",
- factor = 1,
- nfeatures = 10,     # Top number of features to highlight
- scale = TRUE           # Scale weights from -1 to 1
-)
-plot_top_weights(MOFAobjectNew,
  view = "Mutations",
  factor = 1,
  nfeatures = 10,     # Top number of features to highlight
@@ -324,23 +304,11 @@ plot_factor(MOFAobject,
   add_violin = TRUE,
   dodge = TRUE
 )
-plot_factor(MOFAobjectNew, 
-  factors = 1, 
-  color_by = "IGHV",
-  add_violin = TRUE,
-  dodge = TRUE
-)
 ```
 
 We can also plot Factor values coloured by other covariates, for example `Gender`. As shown above, this variable has no association with Factor 1:
 ```{r}
 plot_factor(MOFAobject, 
-  factors = 1, 
-  color_by = "Gender",
-  dodge = TRUE,
-  add_violin = TRUE
-)
-plot_factor(MOFAobjectNew, 
   factors = 1, 
   color_by = "Gender",
   dodge = TRUE,
@@ -353,11 +321,6 @@ plot_factor(MOFAobjectNew,
 From the variance explained plot we know that Factor 1 drives variation across all data modalities. Let's visualise the mRNA expression changes that are associated with Factor 1:
 ```{r}
 plot_weights(MOFAobject, 
-  view = "mRNA", 
-  factor = 1, 
-  nfeatures = 10
-)
-plot_weights(MOFAobjectNew, 
   view = "mRNA", 
   factor = 1, 
   nfeatures = 10
@@ -375,25 +338,11 @@ plot_data_scatter(MOFAobject,
   sign = "positive",
   color_by = "IGHV"
 ) + labs(y="RNA expression")
-plot_data_scatter(MOFAobjectNew, 
-  view = "mRNA",
-  factor = 1,  
-  features = 4,
-  sign = "positive",
-  color_by = "IGHV"
-) + labs(y="RNA expression")
 ```
 
 This function generates a scatterplot of Factor 1 values (x-axis) versus expression values (y-axis) for the top 4 genes with largest negative weight. Samples are coloured by IGHV status:
 ```{r}
 plot_data_scatter(MOFAobject, 
-  view = "mRNA",
-  factor = 1,  
-  features = 4,
-  sign = "negative",
-  color_by = "IGHV"
-) + labs(y="RNA expression")
-plot_data_scatter(MOFAobjectNew, 
   view = "mRNA",
   factor = 1,  
   features = 4,
@@ -412,28 +361,11 @@ plot_data_heatmap(MOFAobject,
   show_rownames = TRUE, show_colnames = FALSE,
   scale = "row"
 )
-plot_data_heatmap(MOFAobjectNew, 
-  view = "mRNA",
-  factor = 1,  
-  features = 25,
-  cluster_rows = FALSE, cluster_cols = FALSE,
-  show_rownames = TRUE, show_colnames = FALSE,
-  scale = "row"
-)
 ```
 
 `plot_data_heatmap` has an interesting argument to "beautify" the heatmap: `denoise = TRUE`. Instead of plotting the (noisy) input data, we can plot the data reconstructed by the model, where noise has been removed:
 ```{r}
 plot_data_heatmap(MOFAobject, 
-  view = "mRNA",
-  factor = 1,  
-  features = 25,
-  denoise = TRUE,
-  cluster_rows = FALSE, cluster_cols = FALSE,
-  show_rownames = TRUE, show_colnames = FALSE,
-  scale = "row"
-)
-plot_data_heatmap(MOFAobjectNew, 
   view = "mRNA",
   factor = 1,  
   features = 25,
@@ -456,12 +388,6 @@ plot_weights(MOFAobject,
   nfeatures = 10,
   abs = FALSE
 )
-plot_weights(MOFAobjectNew, 
-  view = "Mutations", 
-  factor = 3, 
-  nfeatures = 10,
-  abs = FALSE
-)
 ```
 
 In this case we have two mutations that have large weight. One of them is the trisomy of chromosome 12, which is the [second most important clinical marker in CLL](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6058775/)!  
@@ -471,12 +397,6 @@ In this case we have two mutations that have large weight. One of them is the tr
 Let's verify this by plotting the Factor values grouping samples by the presence or absence of trisomy12:
 ```{r}
 plot_factor(MOFAobject, 
-  factors = 3, 
-  color_by = "trisomy12",
-  dodge = TRUE,
-  add_violin = TRUE
-)
-plot_factor(MOFAobjectNew, 
   factors = 3, 
   color_by = "trisomy12",
   dodge = TRUE,
@@ -495,26 +415,10 @@ plot_data_scatter(MOFAobject,
   sign = "positive",
   color_by = "trisomy12"
 ) + labs(y="Drug response (cell viability)")
-plot_data_scatter(MOFAobjectNew, 
-  view = "Drugs",
-  factor = 3,  
-  features = 4,
-  sign = "positive",
-  color_by = "trisomy12"
-) + labs(y="Drug response (cell viability)")
 ```
 
 ```{r}
 plot_data_heatmap(MOFAobject, 
-  view = "mRNA",
-  factor = 3,  
-  features = 25,
-  denoise = TRUE,
-  cluster_rows = TRUE, cluster_cols = FALSE,
-  show_rownames = TRUE, show_colnames = FALSE,
-  scale = "row"
-)
-plot_data_heatmap(MOFAobjectNew, 
   view = "mRNA",
   factor = 3,  
   features = 25,
@@ -530,20 +434,6 @@ plot_data_heatmap(MOFAobjectNew,
 Now that we have characterised the etiology of the two main Factors, let's explore them together:
 ```{r}
 p <- plot_factors(MOFAobject, 
-  factors = c(1,3), 
-  color_by = "IGHV",
-  shape_by = "trisomy12",
-  dot_size = 2.5,
-  show_missing = TRUE
-)
-
-p <- p + 
-  geom_hline(yintercept=-1, linetype="dashed") +
-  geom_vline(xintercept=(-0.5), linetype="dashed")
-
-print(p)
-
-p <- plot_factors(MOFAobjectNew, 
   factors = c(1,3), 
   color_by = "IGHV",
   shape_by = "trisomy12",
@@ -610,33 +500,24 @@ p <- p +
 print(p)
 ```
 
-<!-- Plot predictions for Trisomy12 -->
-<!-- ```{r} -->
-<!-- MOFAobject@samples_metadata$trisomy12.pred_logical <- c("True","Predicted")[as.numeric(is.na(MOFAobject@samples_metadata$trisomy12))+1] -->
+Plot predictions for Trisomy12
+```{r}
+MOFAobject@samples_metadata$trisomy12.pred_logical <- c("True","Predicted")[as.numeric(is.na(MOFAobject@samples_metadata$trisomy12))+1]
 
-<!-- p <- plot_factors(MOFAobject,  -->
-<!--   factors = c(1,3),  -->
-<!--   color_by = "trisomy12.pred", -->
-<!--   shape_by = "trisomy12.pred_logical", -->
-<!--   dot_size = 2.5, -->
-<!--   show_missing = TRUE -->
-<!-- ) -->
+p <- plot_factors(MOFAobject,
+  factors = c(1,3),
+  color_by = "trisomy12.pred",
+  shape_by = "trisomy12.pred_logical",
+  dot_size = 2.5,
+  show_missing = TRUE
+)
 
-<!-- p <- p +  -->
-<!--   geom_hline(yintercept=-1, linetype="dashed") + -->
-<!--   geom_vline(xintercept=(-0.5), linetype="dashed") -->
+p <- p +
+  geom_hline(yintercept=-1, linetype="dashed") +
+  geom_vline(xintercept=(-0.5), linetype="dashed")
 
-<!-- print(p) -->
-<!-- ``` -->
-
-
-<!-- # Detection of outlier samples (TO-FINISH) -->
-<!-- The plot above indicates that there are a few outlier samples that are interesting to explore. In particular, we have cases where the patient is predicted to be IGHV+ but its molecular profiles (i.e. its value in the latent representation) disagrees. Why? -->
-<!-- - XX -->
-<!-- - XX -->
-<!-- This analysis shows that for the majority of patients the molecular classification and the mutation-based classification agrees, but for a few cases they do not... -->
-
-
+print(p)
+```
 
 # Gene set enrichment analysis (GSEA)
 

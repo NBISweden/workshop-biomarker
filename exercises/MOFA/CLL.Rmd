@@ -31,6 +31,7 @@ library(data.table)
 library(ggplot2)
 library(tidyverse)
 library(utils)
+library(MASS)
 ```
 
 Data is stored as a list of matrices. Features are stored in the rows and samples in the columns

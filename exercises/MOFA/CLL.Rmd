@@ -16,7 +16,9 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-  
+
+**This document is in essence identical to the one linked on the MOFA webpage with some minor modifications. Find the original here: https://raw.githack.com/bioFAM/MOFA2_tutorials/master/R_tutorials/CLL.html**
+
 # Introduction
 This vignette shows how to use MOFA+ on the bulk multi-omics data set that was used in the [first publication of MOFA](https://msb.embopress.org/cgi/doi/10.15252/msb.20178124) and the original vignette of the [MOFA package](https://bioconductor.org/packages/release/bioc/vignettes/MOFA/inst/doc/MOFA_example_CLL.html).  
 

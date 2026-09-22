@@ -16,10 +16,17 @@ Open questions, for literature study:
   that can be used directly
 
 
+## 2026-09-22
+
+I feel I need to take a good at the data,
+datasets can be found at [the MOFAdata GitHub repository](https://github.com/bioFAM/MOFAdata).
+They even have [tutorials](https://biofam.github.io/MOFA2/tutorials.html)
+that can be used directly
 
 
 
 
+## References
 
 - `[Zhang et al., 2025]`
   Zhang, Xinyang, Ali Rahnavard, and Keith A. Crandall. 

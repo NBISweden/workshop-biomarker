@@ -26,7 +26,20 @@ that can be used directly
 
 ## 2026-09-25
 
+The course is called 'Biomarker Discovery:
+from theory to real world examples'.
+However, there may be two places where biomarker discovery starts:
 
+- **From a research question**, discovering the most likely/useful biomarkers.
+  In such a case, the dataset needs to be found.
+- **From a dataset**, where one or more analyses are done
+  to conclude if a biomarker has an effect yes/no
+
+I ask Prasoon, because I do need the answer before I continue :+1:
+
+
+
+ 
 
 
 ## References

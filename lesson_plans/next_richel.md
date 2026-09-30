@@ -42,7 +42,7 @@ However, there may be two places where biomarker discovery starts:
 I ask Prasoon, because I do need the answer before I continue :+1:
 
 
-I can imagine that:
+I can imagine that learning outcomes can be:
 
 - Learners can distinguish the four different types of biomarkers:
   - diagnostic biomarkers: helps to diagnose if there is a disease yes/no
@@ -50,10 +50,15 @@ I can imagine that:
   - predictive biomarkers: predicts the effect of a drug
   - pharmacodynamic biomarkers: measures the interaction between a drug
     and its receptor
+- Learners can conclude the type of biomarker
 
-a prognostic biomarker
-  from a regular biomarker
+## 2026-09-29
 
+I spoke to Prasoon at the NAISS retreat:
+
+- He wants to start from a research question. I like that
+- He wants teaching to be interactive. I like that
+- He wants to assume our learners already know the types of biomakers
 
 
 

@@ -31,15 +31,17 @@ The primary goal of this curriculum is to equip life science researchers with th
 Space is strictly limited to ensure high instructor-to-student interaction during computational practicals.
 
 ### Critical Deadlines
+
 - **Application Opens**: 16 June 2025
 - **Application Closes**: 12 September 2025 at 23:59 CEST
 - **Notification of Acceptance**: 19 September 2025
 
 ### Candidate Selection Process
+
 When application volume exceeds the 20-seat quota, candidates are evaluated and selected based on a balanced set of criteria:
-* Verification of technical entry requirements and prerequisites.
-* Direct relevance of biomarker methodology to the applicant's current research (evaluated via the application statement of motivation).
-* Equal representation across gender identities and geographical distribution across institutions.
+- Verification of technical entry requirements and prerequisites.
+- Direct relevance of biomarker methodology to the applicant's current research (evaluated via the application statement of motivation).
+- Equal representation across gender identities and geographical distribution across institutions.
 
 Official applications are submitted through the portal's online registration form.
 
@@ -49,13 +51,13 @@ Official applications are submitted through the portal's online registration for
 
 The course is designed and taught by experienced bioinformaticians and computational biologists specializing in biomarker identification and multi-omics data integration.
 
-* **Course Leaders (CL)**:
-  * **Mun-Gwan Hong** (SciLifeLab / NBIS)
-  * **Prasoon Agarwal** (SciLifeLab / NBIS)
-* **Instructors & Contributors**:
-  * **Animesh Acharjee**
-  * **Markus Mayrhofer**
-  * **Paul Pyl**
+- **Course Leaders (CL)**:
+    - **Mun-Gwan Hong** (SciLifeLab / NBIS)
+    - **Prasoon Agarwal** (SciLifeLab / NBIS)
+- **Instructors & Contributors**:
+    - **Animesh Acharjee**
+    - **Markus Mayrhofer**
+    - **Paul Pyl**
 
 For administrative inquiries or date updates, contact the course leadership team at `edu.biomarkers@nbis.se`.
 
@@ -71,6 +73,7 @@ Tuition fees cover full course attendance, instructional material, scheduled lun
 | **Non-Academic / Industry Participants** | 12,000 SEK |
 
 ### Invoicing Protocol
+
 - Course fees are invoiced directly to the participant's host institution or company following formal acceptance confirmation.
 - **Billing Constraint**: NBIS cannot issue invoices to private individuals; payment must be processed through an institutional or corporate entity.
 
@@ -134,11 +137,13 @@ Upon successful completion of the course, participants are expected to demonstra
 To participate fully in hands-on computer labs, attendees must meet specific software and knowledge requirements.
 
 ### Mandatory Requirements
+
 - **Hardware**: Personal laptop capable of running computational workflows in R.
 - **Software**: Recent installation of R and RStudio.
 - **Programming Competency**: Working knowledge of R scripting (data manipulation, plotting, basic function calls) or prior completion of an equivalent NBIS introductory R course.
 
 ### Recommended Preparation
+
 - Fundamental understanding of introductory biostatistics (hypothesis testing, regression).
 - Prior exposure to molecular biological studies or biomarker research pipelines.
 - An active GitHub account with GitHub Copilot Pro enabled (free tier available for academic students and teachers).

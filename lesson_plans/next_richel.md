@@ -32,9 +32,9 @@ However, there may be two places where biomarker discovery starts:
 
 - **From a research question**, discovering the most likely/useful biomarkers.
   In such a case, the dataset needs to be found.
-  - [Open Biomarker datasets](https://data.biomarkerkb.org/)
-  - Multi-cohort data
-  - Evaluation a biomarker being valid when using two datasets
+    - [Open Biomarker datasets](https://data.biomarkerkb.org/)
+    - Multi-cohort data
+    - Evaluation a biomarker being valid when using two datasets
 
 - **From a dataset**, where one or more analyses are done
   to conclude if a biomarker has an effect yes/no
@@ -45,10 +45,10 @@ I ask Prasoon, because I do need the answer before I continue :+1:
 I can imagine that learning outcomes can be:
 
 - Learners can distinguish the four different types of biomarkers:
-  - diagnostic biomarkers: helps to diagnose if there is a disease yes/no
-  - prognostic biomarkers: predict an outcome of a disease
-  - predictive biomarkers: predicts the effect of a drug
-  - pharmacodynamic biomarkers: measures the interaction between a drug
+    - diagnostic biomarkers: helps to diagnose if there is a disease yes/no
+    - prognostic biomarkers: predict an outcome of a disease
+    - predictive biomarkers: predicts the effect of a drug
+    - pharmacodynamic biomarkers: measures the interaction between a drug
     and its receptor
 - Learners can conclude the type of biomarker
 
@@ -59,8 +59,6 @@ I spoke to Prasoon at the NAISS retreat:
 - He wants to start from a research question. I like that
 - He wants teaching to be interactive. I like that
 - He wants to assume our learners already know the types of biomakers
-
-
 
 
 ## References

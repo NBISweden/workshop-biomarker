@@ -2,7 +2,7 @@
 
 ## What is the course goal?
 
-To discover biomakers and evaluate the findings for correctness,
+To discover biomarkers and evaluate the findings for correctness,
 starting from a research question.
 
 ## How is the course designed?

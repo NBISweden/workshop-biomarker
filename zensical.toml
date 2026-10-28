@@ -11,12 +11,14 @@ nav = [
 ]
 
 extra_css = [
-  "stylesheets/scilifelab-v2.css",
+  "stylesheets/extra.css",
 ]
 
 [project.theme]
 # https://zensical.org/docs/setup/basics/?h=theme#theme-variant
 #variant = "classic"
+#palette.primary = "light green"
+#palette.accent = "green"
 
 logo = "assets/sll_green.png"
 

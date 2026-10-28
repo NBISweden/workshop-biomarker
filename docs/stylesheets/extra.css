@@ -1,0 +1,13 @@
+:root {
+  --md-primary-fg-color: #004b49;
+  --md-primary-fg-color--dark: #003331;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #e6f2f1;
+  --md-accent-fg-color: #a3c644;
+  --md-default-fg-color: #1d2a29;
+  --md-default-fg-color--light: #4a5d5b;
+  --md-default-fg-color--lighter: #708482;
+  --md-default-bg-color: #ffffff;
+  --md-sidebar-bg-color: #ffffff;
+  --md-nav-link-color: #004b49;
+}

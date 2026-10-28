@@ -10,7 +10,7 @@ nav = [
   "communication.md",
   {"Misc" = [
      "lesson_plans/README.md",
-     "literature.md",
+     "literature/README.md",
   ]},
   "contact_us.md"
 ]
@@ -20,11 +20,15 @@ extra_css = [
 ]
 
 [project.theme]
-# https://zensical.org/docs/setup/basics/?h=theme#theme-variant
-#variant = "classic"
-#palette.primary = "light green"
-#palette.accent = "green"
 
+# We use the theme in the stylesheet instead
+#
+# Documentation: https://zensical.org/docs/setup/basics/?h=theme#theme-variant
+# variant = "classic"
+# palette.primary = "light green"
+# palette.accent = "green"
+
+favicon = "assets/sll_green.png"
 logo = "assets/sll_green.png"
 
 # https://zensical.org/docs/setup/language/

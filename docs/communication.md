@@ -39,6 +39,7 @@ Space is strictly limited to ensure high instructor-to-student interaction durin
 ### Candidate Selection Process
 
 When application volume exceeds the 20-seat quota, candidates are evaluated and selected based on a balanced set of criteria:
+
 - Verification of technical entry requirements and prerequisites.
 - Direct relevance of biomarker methodology to the applicant's current research (evaluated via the application statement of motivation).
 - Equal representation across gender identities and geographical distribution across institutions.

@@ -26,7 +26,9 @@ The literature used in this course
 
 ???- info "Summary"
 
-    Unsure if this is relevant
+    Redrawn after figure 1:
+
+    ![Redrawn after figure 1 of Califf, 2018](califf_2018_fig_1.svg)
 
 - :material-lock:{ style="color: #757575;" } `[Nakayasu et al., 2021]`
   Nakayasu, E., Gritsenko, M., Piehowski, P.,
@@ -50,5 +52,9 @@ The literature used in this course
   <https://doi.org/10.1038/nbt1235>
 
 ???- info "Summary"
+
+    The paper describes biomarker discovery experiments
+    based on liquid-chromatography–mass-spectrometry analysis
+    of human clinical samples.
 
     Unsure if this is relevant

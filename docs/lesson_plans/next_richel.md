@@ -80,13 +80,15 @@ I check these references first.
 Reference                |Comment on title
 -------------------------|-----------------------------------------------------------------
 `[Nakayasu et al., 2021]`|Is mass-spectrometry-based, should we use this?
-`[Rifai et al., 2006]`   |Seems good
+`[Rifai et al., 2006]`   |Seems good, is oldest
 `[Califf, 2018]`         |Seems good
 
 Open questions:
 
 - Should this course be mass-spectrometry based yes/no
 - What are the differences in approaches
+
+I start with the most recent paper.
 
 ???- question "Answer from Consensus"
 

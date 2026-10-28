@@ -7,7 +7,7 @@ edit_uri = "blob/main/docs/"
 nav = [
   { "Start" = "README.md"},
   "faq.md",
-  "communcation.md"
+  "communication.md"
 ]
 
 extra_css = [
@@ -18,12 +18,7 @@ extra_css = [
 # https://zensical.org/docs/setup/basics/?h=theme#theme-variant
 #variant = "classic"
 
-# https://zensical.org/docs/customization/#extending-the-theme
-#custom_dir = "docs/overrides"
-
-# favicon = "favicon.ico"
-# logo = "logo/naiss_logo_white.png"
-#logo = "https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/actions-tools/logo256.png"
+logo = "assets/sll_green.png"
 
 # https://zensical.org/docs/setup/language/
 language = "en"

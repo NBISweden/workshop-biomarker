@@ -10,6 +10,10 @@ nav = [
   "communcation.md"
 ]
 
+extra_css = [
+  "stylesheets/scilifelab.css",
+]
+
 [project.theme]
 # https://zensical.org/docs/setup/basics/?h=theme#theme-variant
 #variant = "classic"

@@ -7,7 +7,11 @@ edit_uri = "blob/main/docs/"
 nav = [
   { "Start" = "README.md"},
   "faq.md",
-  "communication.md"
+  "communication.md",
+  {"Misc" = [
+     "lesson_plans/README.md",
+  ]},
+  "contact_us.md"
 ]
 
 extra_css = [

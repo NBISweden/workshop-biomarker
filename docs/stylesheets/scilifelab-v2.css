@@ -1,0 +1,499 @@
+/* ==========================================================================
+   SciLifeLab Theme CSS v2 for Zensical & Material Web Applications
+   Grounded in SciLifeLab Visual Identity & Brand Design System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties (Design Tokens & Zensical Theme Overrides)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Color Palette */
+  --scilifelab-dark-teal: #004b49;
+  --scilifelab-deep-navy: #003331;
+  --scilifelab-teal: #00807c;
+  --scilifelab-light-teal: #00a396;
+  --scilifelab-lime-green: #a3c644;
+  --scilifelab-soft-green: #eef6e4;
+  --scilifelab-mint-bg: #e6f2f1;
+
+  /* Neutral Tones */
+  --scilifelab-bg-main: #ffffff;
+  --scilifelab-bg-alt: #f8f9fa;
+  --scilifelab-surface: #ffffff;
+  --scilifelab-border: #e2e8e7;
+  --scilifelab-border-light: #f0f4f4;
+
+  /* Typography Colors */
+  --scilifelab-text-primary: #1d2a29;
+  --scilifelab-text-secondary: #4a5d5b;
+  --scilifelab-text-muted: #708482;
+  --scilifelab-text-on-dark: #ffffff;
+
+  /* Typography Stack */
+  --scilifelab-font-sans: 'Titillium Web', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --scilifelab-font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Spacing & Layout */
+  --scilifelab-radius-sm: 4px;
+  --scilifelab-radius-md: 8px;
+  --scilifelab-radius-lg: 12px;
+  --scilifelab-shadow-sm: 0 1px 3px rgba(0, 75, 73, 0.08);
+  --scilifelab-shadow-md: 0 4px 12px rgba(0, 75, 73, 0.12);
+  --scilifelab-shadow-lg: 0 8px 24px rgba(0, 75, 73, 0.15);
+  --scilifelab-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Zensical / MkDocs Material Variable Overrides */
+  --md-primary-fg-color: #004b49;
+  --md-primary-fg-color--dark: #003331;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #e6f2f1;
+  --md-accent-fg-color: #a3c644;
+  --md-default-fg-color: #1d2a29;
+  --md-default-fg-color--light: #4a5d5b;
+  --md-default-fg-color--lighter: #708482;
+  --md-default-bg-color: #ffffff;
+  --md-sidebar-bg-color: #ffffff;
+  --md-nav-link-color: #004b49;
+}
+
+/* --------------------------------------------------------------------------
+   2. Base & Reset Styles
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--scilifelab-font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--scilifelab-text-primary);
+  background-color: var(--scilifelab-bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   3. Left Navigation & Sidebar Styling (Zensical & MkDocs Specific Fixes)
+   -------------------------------------------------------------------------- */
+/* Ensure background is white and text is dark teal across all left menus */
+aside,
+.sidebar,
+.nav-sidebar,
+.zensical-sidebar,
+.md-sidebar,
+.md-sidebar--primary,
+.md-sidebar__inner,
+.md-nav,
+[data-md-component="navigation"] {
+  background-color: var(--scilifelab-bg-main) !important;
+  color: var(--scilifelab-dark-teal) !important;
+}
+
+/* Sidebar Titles & Headers */
+.md-nav__title,
+.sidebar-title,
+.nav-title,
+.zensical-sidebar h2,
+.zensical-sidebar h3 {
+  color: var(--scilifelab-dark-teal) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Sidebar Menu Items & Links */
+.md-nav__list,
+.sidebar-menu,
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.md-nav__item,
+.sidebar-item {
+  margin-bottom: 0.25rem;
+}
+
+/* Primary Sidebar Links - Fixing white-on-white text */
+.md-nav__link,
+.sidebar a,
+.nav-sidebar a,
+.zensical-sidebar a,
+.nav-link-sidebar {
+  color: var(--scilifelab-text-primary) !important;
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: var(--scilifelab-radius-md) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none !important;
+  transition: var(--scilifelab-transition);
+}
+
+/* Hover state for sidebar links */
+.md-nav__link:hover,
+.sidebar a:hover,
+.nav-sidebar a:hover,
+.zensical-sidebar a:hover {
+  color: var(--scilifelab-dark-teal) !important;
+  background-color: var(--scilifelab-mint-bg) !important;
+  text-decoration: none !important;
+}
+
+/* Active / Selected sidebar link */
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link,
+.sidebar a.active,
+.nav-sidebar a.active,
+.zensical-sidebar a.active {
+  color: var(--scilifelab-dark-teal) !important;
+  background-color: var(--scilifelab-mint-bg) !important;
+  border-left: 4px solid var(--scilifelab-lime-green) !important;
+  font-weight: 700 !important;
+}
+
+/* Icon colors inside navigation */
+.md-nav__link svg,
+.sidebar svg,
+.nav-sidebar svg {
+  fill: var(--scilifelab-teal) !important;
+  color: var(--scilifelab-teal) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Typography & Headings
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--scilifelab-dark-teal);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+h1, .md-typeset h1 {
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.4em;
+  border-bottom: 3px solid var(--scilifelab-lime-green);
+}
+
+h2, .md-typeset h2 {
+  font-size: 1.75rem;
+  position: relative;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--scilifelab-teal);
+}
+
+h3, .md-typeset h3 {
+  font-size: 1.35rem;
+}
+
+h4, .md-typeset h4 {
+  font-size: 1.15rem;
+  color: var(--scilifelab-text-secondary);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--scilifelab-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--scilifelab-transition);
+}
+
+a:hover, a:focus {
+  color: var(--scilifelab-dark-teal);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   5. Header & Top Navigation Banner
+   -------------------------------------------------------------------------- */
+header, .site-header, nav.navbar, .md-header {
+  background-color: var(--scilifelab-dark-teal) !important;
+  color: var(--scilifelab-text-on-dark) !important;
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--scilifelab-shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container, .navbar-content, .md-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-title, .site-logo, .md-header__button.md-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--scilifelab-text-on-dark) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-title span.accent {
+  color: var(--scilifelab-lime-green);
+}
+
+.md-header__title, .md-header__topic {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Top Navigation Links */
+nav.top-nav a, .nav-link-top {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--scilifelab-radius-sm);
+  transition: var(--scilifelab-transition);
+}
+
+nav.top-nav a:hover, .nav-link-top:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. Main Content Layout & Container
+   -------------------------------------------------------------------------- */
+main, .main-content, .container, .md-main__inner {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Cards & Grid System
+   -------------------------------------------------------------------------- */
+.grid, .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background-color: var(--scilifelab-surface);
+  border: 1px solid var(--scilifelab-border);
+  border-radius: var(--scilifelab-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--scilifelab-shadow-sm);
+  transition: var(--scilifelab-transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--scilifelab-shadow-md);
+  border-color: var(--scilifelab-teal);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: var(--scilifelab-dark-teal);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.card-badge, .badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--scilifelab-dark-teal);
+  background-color: var(--scilifelab-mint-bg);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Callouts & Admonition / Alert Boxes
+   -------------------------------------------------------------------------- */
+.callout, .alert-box, blockquote, .md-typeset .admonition {
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: var(--scilifelab-radius-md);
+  background-color: var(--scilifelab-bg-alt);
+  border-left: 5px solid var(--scilifelab-teal);
+  box-shadow: var(--scilifelab-shadow-sm);
+}
+
+.callout.info, .md-typeset .admonition.info {
+  border-left-color: var(--scilifelab-teal);
+  background-color: var(--scilifelab-mint-bg);
+}
+
+.callout.success, .callout.highlight, .md-typeset .admonition.note {
+  border-left-color: var(--scilifelab-lime-green);
+  background-color: var(--scilifelab-soft-green);
+}
+
+.callout-title, .md-typeset .admonition-title {
+  font-weight: 700;
+  color: var(--scilifelab-dark-teal);
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Buttons & Actions
+   -------------------------------------------------------------------------- */
+.btn, button, input[type="submit"], .md-typeset .md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--scilifelab-font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--scilifelab-radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--scilifelab-transition);
+  text-decoration: none;
+}
+
+.btn-primary, button.primary, .md-typeset .md-button--primary {
+  background-color: var(--scilifelab-lime-green) !important;
+  color: var(--scilifelab-deep-navy) !important;
+}
+
+.btn-primary:hover, button.primary:hover, .md-typeset .md-button--primary:hover {
+  background-color: #92b43b !important;
+  color: var(--scilifelab-deep-navy) !important;
+  text-decoration: none;
+  box-shadow: var(--scilifelab-shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   10. Tables & Data Display
+   -------------------------------------------------------------------------- */
+table, .md-typeset table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  background-color: var(--scilifelab-surface);
+  border-radius: var(--scilifelab-radius-md);
+  overflow: hidden;
+  box-shadow: var(--scilifelab-shadow-sm);
+}
+
+th, td, .md-typeset th, .md-typeset td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--scilifelab-border-light);
+}
+
+th, .md-typeset th {
+  background-color: var(--scilifelab-dark-teal) !important;
+  color: var(--scilifelab-text-on-dark) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--scilifelab-bg-alt);
+}
+
+tr:hover {
+  background-color: var(--scilifelab-mint-bg);
+}
+
+/* --------------------------------------------------------------------------
+   11. Code & Syntax Highlighting
+   -------------------------------------------------------------------------- */
+code, kbd, pre, .md-typeset code {
+  font-family: var(--scilifelab-font-mono);
+  font-size: 0.9em;
+}
+
+code, .md-typeset code {
+  background-color: var(--scilifelab-bg-alt);
+  color: var(--scilifelab-dark-teal);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--scilifelab-radius-sm);
+  border: 1px solid var(--scilifelab-border-light);
+}
+
+pre, .md-typeset pre {
+  background-color: var(--scilifelab-deep-navy) !important;
+  color: #e2f1ef !important;
+  padding: 1.25rem;
+  border-radius: var(--scilifelab-radius-md);
+  overflow-x: auto;
+  line-height: 1.5;
+  box-shadow: var(--scilifelab-shadow-sm);
+}
+
+pre code, .md-typeset pre code {
+  background-color: transparent !important;
+  color: inherit !important;
+  padding: 0;
+  border: none;
+}
+
+/* --------------------------------------------------------------------------
+   12. Footer
+   -------------------------------------------------------------------------- */
+footer, .site-footer, .md-footer {
+  background-color: var(--scilifelab-deep-navy) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 3rem 1.5rem 2rem;
+  margin-top: 4rem;
+  border-top: 4px solid var(--scilifelab-lime-green);
+}
+
+.footer-container, .md-footer-meta {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  
+  .header-container, .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  main, .main-content, .container {
+    padding: 0 1rem;
+  }
+}

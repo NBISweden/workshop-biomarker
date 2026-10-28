@@ -11,7 +11,7 @@ nav = [
 ]
 
 extra_css = [
-  "stylesheets/scilifelab.css",
+  "stylesheets/scilifelab-v2.css",
 ]
 
 [project.theme]

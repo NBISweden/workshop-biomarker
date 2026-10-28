@@ -64,6 +64,30 @@ I spoke to Prasoon at the NAISS retreat:
 
 What are Evidence-based best practices for biomarker discovery?
 
+I read, from a Consensus answer:
+
+> Evidence-based biomarker discovery relies on structured multi-phase
+> frameworks spanning early candidate selection to analytical validation
+> and independent clinical qualification
+> (Nakayasu et al., 2021; Rifai et al., 2006; Califf, 2018). 
+> Translating initial omics or mass-spectrometry findings into
+> reliable clinical assays requires strict adherence to statistical
+> rigor, standardized sample handling, and pre-specified contexts of
+> use (Nakayasu et al., 2021; Ahmad et al., 2023; Fernandez-Metzler et al., 2022).
+
+I check these references first.
+
+Reference                |Comment on title
+-------------------------|-----------------------------------------------------------------
+`[Nakayasu et al., 2021]`|Is mass-spectrometry-based, should we use this?
+`[Rifai et al., 2006]`   |Seems good
+`[Califf, 2018]`         |Seems good
+
+Open questions:
+
+- Should this course be mass-spectrometry based yes/no
+- What are the differences in approaches
+
 ???- question "Answer from Consensus"
 
     # Evidence-based best practices require **prospective study design**, robust quality control, and **multicohort validation**.
@@ -266,3 +290,7 @@ Which dataset to use?
   "Machine learning enhances biomarker discovery:
   From multi-omics to functional genomics." Medical Research Archives 8 (2025).
   [DOI](https://doi.org/10.18103/mra.v13i8.6888)
+
+
+- `[Nakayasu et al., 2021]` Nakayasu, E., Gritsenko, M., Piehowski, P., Gao, Y.-Q., Orton, D., Schepmoes, A., Fillmore, T., Frohnert, B., Rewers, M., Krischer, J., Ansong, C., Suchy-Dicey, A. M., Evans-Molina, C., Qian, W., Webb-Robertson, B., & Metz, T. (2021). Tutorial: best practices and considerations for mass-spectrometry-based protein biomarker discovery and validation. *Nature protocols, 16*, 3737 - 3760. https://doi.org/10.1038/s41596-021-00566-6
+

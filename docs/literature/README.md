@@ -269,7 +269,7 @@ The literature used in this course
   Protein biomarker discovery and validation:
   the long and uncertain path to clinical utility.
   *Nature Biotechnology, 24*, 971-983.
-  <https://doi.org/10.1038/nbt1235>
+  [`https://doi.org/10.1038/nbt1235`](https://doi.org/10.1038/nbt1235)
 
 ???- info "Summary of `[Rifai et al., 2006]`"
 

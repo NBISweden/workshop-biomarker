@@ -19,14 +19,15 @@ with a subtype of the disease'
 An endotype is one of many biological features and/or pathways
 to achieve the same phenotype.
 
-'Although patients may clinically manifest in a similar man-
-ner, an **endotype** defines a subgroup of patients who share a
+'Although patients may clinically manifest in a similar manner,
+an **endotype** defines a subgroup of patients who share a
 common underlying biology or pathway mechanism, which
 drives the manifestation of the disease or phenotype' `[Ng et al., 2023]`
 
 ## Prognostic biomarkers
 
-'prognostic' comes from 'prognōsticum',
+'prognostic' comes from 'prognosticum' (second 'o' has a horizontal line
+above it),
 which means 'signs predicting what sort of weather is coming'.
 In the context of biomakers, these used to determine which stage of a disease
 a patient is, to give stage-specific treatment.

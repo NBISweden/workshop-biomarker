@@ -1,4 +1,3 @@
 # Prerequisites
 
-- You know the following terms:
-    - Prognostic biomarker
+- You can name and describe at least three different types of biomarkers

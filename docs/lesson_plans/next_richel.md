@@ -64,7 +64,7 @@ I spoke to Prasoon at the NAISS retreat:
 
 - He wants to start from a research question. I like that
 - He wants teaching to be interactive. I like that
-- He wants to assume our learners already know the types of biomakers
+- He wants to assume our learners already know the types of biomarkers
 
 ## 2026-10-28
 
@@ -298,7 +298,7 @@ and `[Nakayasu et al., 2021]` and `[Rifai et al., 2006]`.
 These are, however, mostly describing lab work.
 Let's search for something computational.
 
-???- question "What did you prommpt"
+???- question "What did you prompt"
 
     My prompt to Consensus:
 

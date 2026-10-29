@@ -1,3 +1,9 @@
+Ekström
+Mol
+Rameika
+colorectal
+metabolomic
+Ögren
 al
 Ansong
 bbag
@@ -37,7 +43,7 @@ Orton
 Petracci
 pharmacodynamic
 Piehowski
-prognōsticum
+prognosticum
 PSP
 Qian
 Quinlan

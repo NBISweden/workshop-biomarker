@@ -394,14 +394,41 @@ What can I learn from earlier course evaluations?
 
 Questions to Prasoon:
 
-- [ ] Where is all the other course material (i.e. that not in the GitHub
+- [/] Where is all the other course material (i.e. that not in the GitHub
   repository)? Can I upload it?
-- [ ] Could I have the earlier course evaluations?
-- [ ] Will the course use only multi-omics datasets
+- [/] Could I have the earlier course evaluations?
+- [/] Will the course use only multi-omics datasets
   (i.e. and not use single-omics)?
-- [ ] Does the course teach how to verify and validate a biomarker?
+- [/] Does the course teach how to verify and validate a biomarker?
   The title states only 'Discovery', not these two next steps
-- [ ] Where is the course? Online, in real life, of hybrid?
-- [ ] Do you agree to limit lectures to 10 minutes? If not, which length?
+- [/] Where is the course? Online, in real life, of hybrid?
+- [/] Do you agree to limit lectures to 10 minutes? If not, which length?
 
 Asked.
+
+I do like the recent paper:
+
+- Ögren, J.Å., Ekström, J., Rameika, N. et al. Composite proteomic and metabolomic plasma biomarkers for detection of colorectal, lung and ovarian cancers. Mol Cancer 25, 105 (2026). https://doi.org/10.1186/s12943-026-02654-1
+
+It has a nice public multi-modal dataset, with +400 markers and +900 patients.
+
+I see that Uppsala University teaches
+[Biomarkers: Discovery and Validation](https://www.uu.se/en/study/syllabus?query=50549)
+for 7.5 credits (i.e around 5 full-time weeks).
+Who would teach that ...?
+
+These are its learning outcomes:
+
+- describe the process and methods of biomarker discovery and validation
+- describe different types of biomarkers and methods of applications
+- account for known biomarkers for important human diseases
+- theoretically formulate and process scientific questions and laboratory techniques
+- account for and evaluate current theories, methods and techniques within the research field, their practical execution and application
+- compile, critically analyse and evaluate research results and present these both orally and in writing
+
+Maybe we should add an HPC component, so that this course differentiates
+itself from the rest?
+
+- [ ] Ask Prasoon on this line of reasoning. What is unique about the course?
+  Should we add HPC to make it stand out?
+

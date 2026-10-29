@@ -2,23 +2,14 @@
 
 ???- info "What are the option to describe open and closed access?"
 
-    What is my favorite way to describe open and closed access?
-
-    ![Open Access](https://img.shields.io/badge/Access-Open_Access-orange?logo=unpaywall&logoColor=white)
-
-    ![Closed Access](https://img.shields.io/badge/Access-Closed-grey?logo=lock&logoColor=white)
-
-    My favorite:
-
-    :material-lock-open-variant:{ style="color: #F47D20;" }
-
-    :material-lock-open-variant:
-
-    My favorite:
-
-    :material-lock:{ style="color: #757575;" }
-
-    :material-lock:
+    Option                                                                                                 |Verdict
+    -------------------------------------------------------------------------------------------------------|------------
+    :material-lock-open-variant:{ style="color: #F47D20;" }                                                | My favorite
+    :material-lock:{ style="color: #757575;" }                                                             | My favorite
+    ![Open Access](https://img.shields.io/badge/Access-Open_Access-orange?logo=unpaywall&logoColor=white)  | Neh
+    ![Closed Access](https://img.shields.io/badge/Access-Closed-grey?logo=lock&logoColor=white)            | Neh
+    :material-lock-open-variant:                                                                           | Simplest
+    :material-lock:                                                                                        | Simplest
 
 The literature used in this course
 
@@ -72,7 +63,7 @@ The literature used in this course
     > markers
 
 
-- `[Dhillon et al., 2022]` Dhillon, A., Singh, A., & Bhalla, V. (2022). A Systematic Review on Biomarker Identification for Cancer Diagnosis and Prognosis in Multi-omics: From Computational Needs to Machine Learning and Deep Learning. *Archives of Computational Methods in Engineering, 30*, 917-949. https://doi.org/10.1007/s11831-022-09821-9
+- `[Dhillon et al., 2022]` Dhillon, A., Singh, A., & Bhalla, V. (2022). A Systematic Review on Biomarker Identification for Cancer Diagnosis and Prognosis in Multi-omics: From Computational Needs to Machine Learning and Deep Learning. *Archives of Computational Methods in Engineering, 30*, 917-949. <https://doi.org/10.1007/s11831-022-09821-9>
 
 - `[Fleming and Demets, 1996]`
   Fleming, Thomas R., and David L. DeMets.
@@ -157,6 +148,19 @@ The literature used in this course
 
     ![Figure 3 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_3.png)
 
+<!-- Ng et al., 2023 -->
+
+- :material-lock-open-variant:{ style="color: #F47D20;" } `[Ng et al., 2023]`
+  Ng, S., Masarone, S., Watson, D., & Barnes, M. R. (2023).
+  The benefits and pitfalls of machine learning for biomarker discovery.
+  *Cell and Tissue Research, 394*, 17 - 31.
+  <https://doi.org/10.1007/s00441-023-03816-z>
+
+???- info "Summary of `[[Ng et al., 2023]]`"
+
+    ...
+
+
 - :material-lock-open-variant:{ style="color: #F47D20;" } `[Njume et al., 2026]`
   Njume, C. M., Petracci, I., Bellini, S., Goljanek‐Whysall, K., Quinlan, L. R.,
   Fiszer, A., Borroni, B., Ghidoni, R., Kumbasar, A., & Çakmak, A. (2026).
@@ -194,7 +198,6 @@ The literature used in this course
 
     Code at [its GitHub repository](https://github.com/itu-bioinformatics-database-lab/biomarker-benchmark)
 
-- `[Ng et al., 2023]` Ng, S., Masarone, S., Watson, D., & Barnes, M. R. (2023). The benefits and pitfalls of machine learning for biomarker discovery. *Cell and Tissue Research, 394*, 17 - 31. https://doi.org/10.1007/s00441-023-03816-z
 
 - `[Prentice, 1989]` Prentice, Ross L.
   "Surrogate endpoints in clinical trials: definition and operational criteria."

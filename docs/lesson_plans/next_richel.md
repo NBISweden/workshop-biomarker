@@ -377,11 +377,10 @@ Let's search for something computational.
 Good, I will read, in this order:
 
 - `[Njume et al., 2026]`: tests the many different possible pipelines:
-  - 'deep learning models did not outperform simpler classifiers'
-  - 'Triple-omics yielded the highest validation'
+    - 'deep learning models did not outperform simpler classifiers'
+    - 'Triple-omics yielded the highest validation'
 - `[Ng et al., 2023]`
 - `[Dhillon et al., 2022]`
 
 ## References
-
 

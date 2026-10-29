@@ -1,9 +1,12 @@
 # Lesson plan
 
 <!-- markdownlint-disable MD004 -->
+<!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD026 -->
+<!-- markdownlint-disable MD031 -->
 <!-- markdownlint-disable MD034 -->
+<!-- markdownlint-disable MD036 -->
 <!-- markdownlint-disable MD049 -->
 
 - Author: Richel

@@ -29,7 +29,7 @@ drives the manifestation of the disease or phenotype' `[Ng et al., 2023]`
 'prognostic' comes from 'prognosticum' (second 'o' has a horizontal line
 above it),
 which means 'signs predicting what sort of weather is coming'.
-In the context of biomakers, these used to determine which stage of a disease
+In the context of biomarkers, these used to determine which stage of a disease
 a patient is, to give stage-specific treatment.
 
 For example, type 1 diabetes mellitus is diagnosed as such from

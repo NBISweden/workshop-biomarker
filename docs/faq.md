@@ -8,6 +8,11 @@ To discover biomarkers and evaluate the findings for correctness,
 using computational approaches,
 starting from a research question.
 
+Course non-goals:
+
+- Describe best practices on the wetlab parts
+- List all the computational techniques to discover biomarkers
+
 ### Does the course teach how to verify and validate a biomarker?
 
 Yes.

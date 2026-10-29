@@ -285,14 +285,103 @@ Which dataset to use?
         Tool Integration & Programmatic Access: Pre-curated benchmark collections available through R/Python libraries (such as curatedTCGAData or Therapeutic Data Commons) minimize data-wrangling friction in coding labs.
         📥 The full research report is included as the first source in the import card below — import it to chat with the findings directly.
 
+## 2026-10-29
+
+I've read the three main papers `[Califf, 2018]`
+and `[Nakayasu et al., 2021]` and `[Rifai et al., 2006]`.
+These are, however, mostly describing lab work.
+Let's search for something computational.
+
+???- question "What did you prommpt"
+
+    My prompt to Consensus:
+
+    > Thanks! Now focus only on biomarker discovery that can be done computationally.
+
+    # Best practices for **computational biomarker discovery** prioritize sparse selection and external validation.
+
+    Computational biomarker discovery leverages bioinformatics, machine learning (ML), and artificial intelligence (AI) to prioritize predictive molecular signatures from high-dimensional datasets while mitigating severe overfitting (Njume et al., 2026; Dhillon et al., 2022; Ng et al., 2023). Effectively deriving actionable *in silico* signatures requires strict adherence to dimensionality reduction, stability assessments, multi-omics integration, and independent algorithmic benchmarking (Njume et al., 2026; Hédou et al., 2024; Glaab et al., 2021; Zhang et al., 2021).
+
+    ## Methodological Frameworks and Algorithmic Approaches
+
+    Computational pipelines are designed to handle the "curse of dimensionality," where thousands of molecular variables outnumber small sample sizes (Zenbout et al., 2023). Automated tools like BioDiscML standardize the end-to-end analytical workflow by automating preprocessing, multi-algorithm feature selection, and model evaluation across unbalanced clinical datasets (Leclercq et al., 2019). Furthermore, comprehensive benchmarks show that while deep learning can capture complex interactions, simpler linear models and ensemble methods often match or exceed deep networks in classification accuracy and interpretability at lower computational costs (Njume et al., 2026; Ghaleb et al., 2025).
+
+    | Framework / Tool | Analytical Strategy | Validation and Performance Highlights |
+    | :--- | :--- | :--- |
+    | **Stabl** (Hédou et al., 2024) | Noise injection and data-driven signal-to-noise thresholding | Distills 1,400–35,000 features down to 4–34 reliable biomarkers across five clinical studies (Hédou et al., 2024). |
+    | **sDCFE** (Ghaleb et al., 2025) | Fisher-like variance analysis with MAD regularization and clustering | Intersects with XGBoost to yield 82 candidate genes; achieves 94% accuracy on PCAWG (Ghaleb et al., 2025). |
+    | **DIABLO** (Singh et al., 2019) | Multi-omics latent component modeling via mixOmics | Identifies biologically relevant multi-omic drivers discriminating complex phenotype groups (Singh et al., 2019). |
+    | **PBMF** (Arango-Argoty et al., 2025) | Neural network architecture leveraging contrastive learning | Retrospectively uncovered predictive biomarkers in trial data yielding a 15% survival benefit (Arango-Argoty et al., 2025). |
+    | **ProMS / ProMS_mo** (Shi et al., 2021) | Constrained weighted $k$-medoids clustering | Selects functional representative protein markers with alternative replacement candidates (Shi et al., 2021). |
+
+    **Figure 1:** Comparison of specialized computational frameworks for biomarker discovery and feature selection
+
+    ## Dimensionality Reduction and Multi-Omics Integration
+
+    Reducing model complexity through feature selection improves classification accuracy over full-feature baseline models (MohdFaizal et al., 2023). For instance, in acute myocardial infarction classification, reducing 62 features to a parsimonious five-marker panel improved the mean area under the precision-recall curve to 0.8462 (MohdFaizal et al., 2023). Integrating multiple omics layers—such as transcriptomics, methylation, and proteomics—consistently boosts biomarker recovery over single-layer analysis (Njume et al., 2026; Jiang et al., 2025). Knowledge-guided deep architectures like DeePathNet and DeepKEGG illustrate that incorporating biological pathways and molecular networks achieves superior discovery accuracy (Zenbout et al., 2023; Li et al., 2026).
+
+    Unsupervised exploration techniques provide an essential entry point when underlying disease mechanisms or subtypes are poorly defined (Ng et al., 2023). Techniques such as consensus clustering aggregate repeated subsampling runs to establish stable patient partitions that mitigate random noise fluctuations (Ng et al., 2023). To ensure candidate markers reflect true biological significance rather than statistical artifacts, top-performing pipelines intersect statistical feature importance with biological knowledge databases, functional enrichment, and survival analyses (Ghaleb et al., 2025; Glaab et al., 2021; Zhang et al., 2021).
+
+    ## Evidence-Based Computational Best Practices
+
+    * Apply **multivariate feature selection** and statistical screening to eliminate uninformative noise and minimize classification error in high-content profiling (Papoutsoglou et al., 2023; Dai et al., 2025).
+    * Incorporate **prior biological knowledge**, such as protein-protein interaction networks and signaling pathways, to constrain search spaces and boost mechanistic plausibility (Glaab et al., 2021; Zenbout et al., 2023; Li et al., 2026; Zhang et al., 2021).
+    * Prioritize **model interpretability** using post hoc explanation tools or linear estimators rather than black-box architectures to verify candidates before clinical translation (Njume et al., 2026; Ng et al., 2023; Papoutsoglou et al., 2023).
+    * Enforce **external validation** across independent cohorts and standardized reference databases to confirm predictive stability across diverse patient populations (Njume et al., 2026; Jiang et al., 2025; Díaz-Uriarte et al., 2022).
+
+    Computational biomarker discovery establishes reproducible molecular candidates when investigators pair sparse feature selection with biological priors, rigorous model evaluation, and multi-cohort validation (Njume et al., 2026; Hédou et al., 2024; Glaab et al., 2021; Zhang et al., 2021). Adopting these *in silico* practices ensures that candidate signatures demonstrate true generalizability before entering targeted assay development (Wang et al., 2026; Ng et al., 2023; Shi et al., 2021; Díaz-Uriarte et al., 2022).
+     
+    _These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+     
+    ## References
+     
+    Arango-Argoty, G. A., Bikiel, D. E., Sun, G. J., Kipkogei, E., Smith, K. M., Pro, S. C., Choe, E. Y., & Jacob, E. (2025). AI-driven predictive biomarker discovery with contrastive learning to improve clinical trial outcomes.. *Cancer cell*. https://doi.org/10.1016/j.ccell.2025.03.029
+     
+    Dai, Y.-F., Wu, D., Carroll, I., Zou, F., & Zou, B.-M. (2025). High-dimensional biomarker identification for interpretable disease prediction via machine learning models. *Bioinformatics, 41*. https://doi.org/10.1093/bioinformatics/btaf266
+     
+    Dhillon, A., Singh, A., & Bhalla, V. (2022). A Systematic Review on Biomarker Identification for Cancer Diagnosis and Prognosis in Multi-omics: From Computational Needs to Machine Learning and Deep Learning. *Archives of Computational Methods in Engineering, 30*, 917-949. https://doi.org/10.1007/s11831-022-09821-9
+     
+    Díaz-Uriarte, R., De Lope, E. G., Giugno, R., Fröhlich, H., Nazarov, P., Nepomuceno-Chamorro, I. A., Rauschenberger, A., & Glaab, E. (2022). Ten quick tips for biomarker discovery and validation analyses using machine learning. *PLoS Computational Biology, 18*. https://doi.org/10.1371/journal.pcbi.1010357
+     
+    Ghaleb, M. S., Al-Berry, M. N., Ebied, H. M., & Tolba, M. F. (2025). A novel statistical feature selection framework for biomarker discovery and cancer classification via multiomics integration. *BMC Medical Research Methodology, 26*. https://doi.org/10.1186/s12874-025-02713-z
+     
+    Glaab, E., Rauschenberger, A., Banzi, R., Gerardi, C., García, P., & Demotes, J. (2021). Biomarker discovery studies for patient stratification using machine learning analysis of omics data: a scoping review. *BMJ Open, 11*. https://doi.org/10.1136/bmjopen-2021-053674
+     
+    Hédou, J., Marić, I., Bellan, G., Einhaus, J., Gaudillière, D., Ladant, F.-X., Verdonk, F., Stelzer, I., Feyaerts, D., Tsai, A., Ganio, E., Sabayev, M., Gillard, J., Amar, J., Cambriel, A., Oskotsky, T., Roldan, A., Golob, J., Sirota, M., . . . Gaudilliere, B. (2024). Discovery of sparse, reliable omic biomarkers with Stabl. *Nature biotechnology, 42*, 1581 - 1593. https://doi.org/10.1038/s41587-023-02033-x
+     
+    Jiang, Z., Zhang, H.-X., Gao, Y., & Sun, Y. (2025). Multi-omics strategies for biomarker discovery and application in personalized oncology. *Molecular Biomedicine, 6*. https://doi.org/10.1186/s43556-025-00340-0
+     
+    Leclercq, M., Vittrant, B., Martin-Magniette, M., Scott-Boyer, M., Périn, O., Bergeron, A., Fradet, Y., & Droit, A. (2019). Large-Scale Automatic Feature Selection for Biomarker Discovery in High-Dimensional OMICs Data. *Frontiers in Genetics, 10*. https://doi.org/10.3389/fgene.2019.00452
+     
+    Li, A. Z., Du, Y., Liu, Y., Chen, L., & Liu, R.-S. (2026). Benchmarking computational methods for multi-omics biomarker discovery in cancer. *Briefings in Bioinformatics, 27*. https://doi.org/10.64898/2025.12.18.695266
+     
+    MohdFaizal, A., Hon, W.-Y., Thevarajah, T., Khor, S. M., & Chang, S.-W. (2023). A biomarker discovery of acute myocardial infarction using feature selection and machine learning. *Medical & Biological Engineering & Computing*, 1 - 15. https://doi.org/10.1007/s11517-023-02841-y
+     
+    Ng, S., Masarone, S., Watson, D., & Barnes, M. R. (2023). The benefits and pitfalls of machine learning for biomarker discovery. *Cell and Tissue Research, 394*, 17 - 31. https://doi.org/10.1007/s00441-023-03816-z
+     
+    Njume, C. M., Petracci, I., Bellini, S., Goljanek‐Whysall, K., Quinlan, L. R., Fiszer, A., Borroni, B., Ghidoni, R., Kumbasar, A., & Çakmak, A. (2026). When complexity does not pay: benchmarking deep learning and ensemble methods for biomarker discovery. *Briefings in Bioinformatics, 27*. https://doi.org/10.1093/bib/bbag211
+     
+    Papoutsoglou, G., Tarazona, S., Lopes, M. B., Klammsteiner, T., Ibrahimi, E., Eckenberger, J., Novielli, P., Tonda, A., Simeon, A., Shigdel, R., Béreux, S., Vitali, G., Tangaro, S., Lahti, L., Temko, A., Claesson, M., & Berland, M. (2023). Machine learning approaches in microbiome research: challenges and best practices. *Frontiers in Microbiology, 14*. https://doi.org/10.3389/fmicb.2023.1261889
+     
+    Shi, Z., Wen, B., Gao, Q., & Zhang, B. (2021). Feature Selection Methods for Protein Biomarker Discovery from Proteomics or Multiomics Data. *Molecular & Cellular Proteomics : MCP, 20*. https://doi.org/10.1016/j.mcpro.2021.100083
+     
+    Singh, A., Shannon, C., Gautier, B., Rohart, F., Vacher, M., Tebbutt, S., & Cao, K.-A. L. (2019). DIABLO: an integrative approach for identifying key molecular drivers from multi-omics assays. *Bioinformatics*. https://doi.org/10.1093/bioinformatics/bty1054
+     
+    Wang, X., Nguyen, J., Nader, K., Miihkinen, M., Wall, P., Singhal, A., Bedard, P., Ideker, T., Aittokallio, T., & Haibe-Kains, B. (2026). Discovery of predictive biomarkers for cancer therapy through computational approaches. *Nature Reviews Clinical Oncology, 23*, 180 - 200. https://doi.org/10.1038/s41571-025-01109-8
+     
+    Zenbout, I., Bouramoul, A., Meshoul, S., & Amrane, M. (2023). Efficient Bioinspired Feature Selection and Machine Learning Based Framework Using Omics Data and Biological Knowledge Data Bases in Cancer Clinical Endpoint Prediction. *IEEE Access, 11*, 2674-2699. https://doi.org/10.1109/access.2023.3234294
+     
+    Zhang, X.-K., Jonassen, I., & Goksøyr, A. (2021). Machine Learning Approaches for Biomarker Discovery Using Gene Expression Data. *Bioinformatics*. https://doi.org/10.36255/exonpublications.bioinformatics.2021.ch4
+ 
+
+Good, I will read, in this order:
+
+- `[Njume et al., 2026]`: tests the many different possible pipelines:
+  - 'deep learning models did not outperform simpler classifiers'
+  - 'Triple-omics yielded the highest validation'
+- `[Ng et al., 2023]`
+- `[Dhillon et al., 2022]`
+
 ## References
 
-- `[Zhang et al., 2025]`
-  Zhang, Xinyang, Ali Rahnavard, and Keith A. Crandall. 
-  "Machine learning enhances biomarker discovery:
-  From multi-omics to functional genomics." Medical Research Archives 8 (2025).
-  [DOI](https://doi.org/10.18103/mra.v13i8.6888)
-
-
-- `[Nakayasu et al., 2021]` Nakayasu, E., Gritsenko, M., Piehowski, P., Gao, Y.-Q., Orton, D., Schepmoes, A., Fillmore, T., Frohnert, B., Rewers, M., Krischer, J., Ansong, C., Suchy-Dicey, A. M., Evans-Molina, C., Qian, W., Webb-Robertson, B., & Metz, T. (2021). Tutorial: best practices and considerations for mass-spectrometry-based protein biomarker discovery and validation. *Nature protocols, 16*, 3737 - 3760. <https://doi.org/10.1038/s41596-021-00566-6>
 

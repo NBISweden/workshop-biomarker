@@ -18,3 +18,8 @@ a patient is, to give stage-specific treatment.
 For example, type 1 diabetes mellitus is diagnosed as such from
 blood glucose concentration, yet there is an earlier stage
 of immunological changes.
+
+## PSP
+
+Short for 'Progressive Supranuclear Palsy',
+a brain disease.

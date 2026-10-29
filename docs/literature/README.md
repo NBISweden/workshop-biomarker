@@ -8,9 +8,13 @@
 
     ![Closed Access](https://img.shields.io/badge/Access-Closed-grey?logo=lock&logoColor=white)
 
+    My favorite:
+
     :material-lock-open-variant:{ style="color: #F47D20;" }
 
     :material-lock-open-variant:
+
+    My favorite:
 
     :material-lock:{ style="color: #757575;" }
 
@@ -67,6 +71,8 @@ The literature used in this course
     > One rapidly developing frontier is the field of digital bio-
     > markers
 
+
+- `[Dhillon et al., 2022]` Dhillon, A., Singh, A., & Bhalla, V. (2022). A Systematic Review on Biomarker Identification for Cancer Diagnosis and Prognosis in Multi-omics: From Computational Needs to Machine Learning and Deep Learning. *Archives of Computational Methods in Engineering, 30*, 917-949. https://doi.org/10.1007/s11831-022-09821-9
 
 - `[Fleming and Demets, 1996]`
   Fleming, Thomas R., and David L. DeMets.
@@ -151,6 +157,44 @@ The literature used in this course
 
     ![Figure 3 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_3.png)
 
+- :material-lock-open-variant:{ style="color: #F47D20;" } `[Njume et al., 2026]`
+  Njume, C. M., Petracci, I., Bellini, S., Goljanek‐Whysall, K., Quinlan, L. R.,
+  Fiszer, A., Borroni, B., Ghidoni, R., Kumbasar, A., & Çakmak, A. (2026).
+  When complexity does not pay: benchmarking deep learning and ensemble methods
+  for biomarker discovery. *Briefings in Bioinformatics, 27*.
+  <https://doi.org/10.1093/bib/bbag211>
+
+???- info "Summary of `[Njume et al., 2026]`"
+
+    A benchmark paper, that used 3 different datasets, 
+    27 feature selection strategies, 11 predictive models
+    and concluded that (1) simpler classifiers are typically just as
+    useful as deep learning models, (2) Combining three omics sets
+    yielded a higher validation when using two or one omics set.
+
+    Multi-omics data analysis has two main problems: (1) a dataset
+    has more dimentions that samples, allowing overfitting, (2) the different
+    types of data have differt data types, (3) limited availability
+    of this sensitive data
+
+    > it remains unclear whether increasing
+    > methodological complexity consistently yields more reliable and
+    > interpretable biomarker panels, or whether simpler and ensemble-
+    > based approaches may offer equal or greater robustness
+
+    The study uses these publicly available datasets:
+
+    - ROSMAP (Alzheimer's Disease)
+    - MayoRNASeq (progressive supranuclear palsy, a brain disease)
+    - TCGA-BRCA (breast cancer)
+
+    ![Data modalities, figure 1 from Njume et al., 2026](njume_et_al_2026_fig_1.png)
+
+    ![Analysis pipeline, figure 2 from Njume et al., 2026](njume_et_al_2026_fig_2.png)
+
+    Code at [its GitHub repository](https://github.com/itu-bioinformatics-database-lab/biomarker-benchmark)
+
+- `[Ng et al., 2023]` Ng, S., Masarone, S., Watson, D., & Barnes, M. R. (2023). The benefits and pitfalls of machine learning for biomarker discovery. *Cell and Tissue Research, 394*, 17 - 31. https://doi.org/10.1007/s00441-023-03816-z
 
 - `[Prentice, 1989]` Prentice, Ross L.
   "Surrogate endpoints in clinical trials: definition and operational criteria."
@@ -179,4 +223,12 @@ The literature used in this course
     of human clinical samples,
     with a focus on lab work.
 
-    Unsure if this is relevant
+- `[Zhang et al., 2025]`
+  Zhang, Xinyang, Ali Rahnavard, and Keith A. Crandall. 
+  "Machine learning enhances biomarker discovery:
+  From multi-omics to functional genomics." Medical Research Archives 8 (2025).
+  [DOI](https://doi.org/10.18103/mra.v13i8.6888)
+
+???- info "Summary of `[Zhang et al., 2025]`"
+
+    ...

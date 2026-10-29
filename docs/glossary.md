@@ -1,5 +1,13 @@
 # Glossary
 
+
+## Diagnostic biomarker 
+
+'A diagnostic biomarker detects or confirms the presence of a
+disease or condition of interest, or identifies an individual
+with a subtype of the disease'
+(inaccessible reference 3 from `[Califf, 2018]`).
+
 ## Prognostic biomarkers
 
 'prognostic' comes from 'prognōsticum',

@@ -24,12 +24,64 @@ The literature used in this course
   *Experimental Biology and Medicine, 243*, 213 - 221.
   <https://doi.org/10.1177/1535370217750088>
 
-???- info "Summary"
+???- info "Summary of `[Califf, 2018]`"
+
+    This paper gives the definition and use of the types of biomarkers.
+    Here are the definitions:
+
+    - 'A diagnostic biomarker detects or confirms the presence of a
+      disease or condition of interest, or identifies an individual
+      with a subtype of the disease'
+    - 'When a biomarker can be measured serially to assess the
+      status of a disease or medical condition for evidence of
+      exposure to a medical product or environmental agent, or
+      to detect an effect of a medical product or biological agent,
+      it is a monitoring biomarker.'
+    - 'When the level of a biomarker changes in response to
+      exposure to a medical product or an environmental agent, it can
+      be called a pharmacodynamic/response biomarker'
+    - 'A predictive biomarker is defined by the finding that the presence
+      or change in the biomarker predicts an individual or
+      group of individuals more likely to experience a favorable
+      or unfavorable effect from the exposure to a medical
+      product or environmental agent.'
+    - 'A prognostic biomarker is used to identify the likelihood of a
+      clinical event, disease recurrence, or disease progression in
+      patients with a disease or medical condition of interest.'
+    - 'A safety biomarker is measured before or after an exposure to
+      a medical intervention or environmental agent to indicate
+      the likelihood, presence, or extent of a toxicity as an adverse
+      event.'
+
+    Interesting quote:
+
+    > The single most common and serious error in the evaluation
+    > of biomarkers is the assumption that a correlation
+    > between the measured level of a biomarker and a clinical
+    > outcome means that the biomarker constitutes a valid surrogate.
 
     Redrawn after figure 1:
 
     ![Redrawn after figure 1 of Califf, 2018](califf_2018_fig_1.svg)
 
+    > One rapidly developing frontier is the field of digital bio-
+    > markers
+
+
+- `[Fleming and Demets, 1996]`
+  Fleming, Thomas R., and David L. DeMets.
+  "Surrogate end points in clinical trials: are we being misled?."
+  Annals of internal medicine 125.7 (1996): 605-613.
+
+
+???- info "Summary of `[Fleming and Demets, 1996]`"
+
+    This study provides the reasoning
+    that a correlation between a biomarker and a disease outcome,
+    does not prove there is a causal effect (i.e. the biomarker is no
+    real surrogate for the clinical outcome)
+
+    It is called 'a classic work' by `[Califf, 2018]`.
 
 - `[MacLean et al., 2019]`
   MacLean, Emily, et al. 
@@ -100,6 +152,19 @@ The literature used in this course
     ![Figure 3 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_3.png)
 
 
+- `[Prentice, 1989]` Prentice, Ross L.
+  "Surrogate endpoints in clinical trials: definition and operational criteria."
+  Statistics in medicine 8.4 (1989): 431-440.
+
+???- info "Summary of `[Prentice, 1989]`"
+
+    This study provides the reasoning
+    that a correlation between a biomarker and a disease outcome,
+    does not prove there is a causal effect (i.e. the biomarker is no
+    real surrogate for the clinical outcome)
+
+    It is called 'a classic work' by `[Califf, 2018]`.
+
 - :material-lock:{ style="color: #757575;" } `[Rifai et al., 2006]`
   Rifai, N., Gillette, M., & Carr, S. (2006).
   Protein biomarker discovery and validation:
@@ -107,10 +172,11 @@ The literature used in this course
   *Nature Biotechnology, 24*, 971-983.
   <https://doi.org/10.1038/nbt1235>
 
-???- info "Summary"
+???- info "Summary of `[Rifai et al., 2006]`"
 
     The paper describes biomarker discovery experiments
-    based on liquid-chromatography–mass-spectrometry analysis
-    of human clinical samples.
+    based on liquid-chromatography-mass-spectrometry analysis
+    of human clinical samples,
+    with a focus on lab work.
 
     Unsure if this is relevant

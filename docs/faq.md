@@ -5,13 +5,19 @@
 ### What is the course goal?
 
 To discover biomarkers and evaluate the findings for correctness,
-using computational approaches,
+from a **multi-omics dataset**
+using **computational approaches**,
 starting from a research question.
+
+- [ ] Discuss with Prasoon if dataset is multi-omics
 
 Course non-goals:
 
 - Describe best practices on the wetlab parts
 - List all the computational techniques to discover biomarkers
+- Use single-omics datasets
+
+- [ ] Discuss with Prasoon if dataset is not single-omics
 
 ### Does the course teach how to verify and validate a biomarker?
 

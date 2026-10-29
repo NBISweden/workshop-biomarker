@@ -148,7 +148,8 @@ The literature used in this course
 
     ![Figure 3 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_3.png)
 
-<!-- Ng et al., 2023 -->
+
+<!-- Ng et al., 2023 ---------------------------------------------------------->
 
 - :material-lock-open-variant:{ style="color: #F47D20;" } `[Ng et al., 2023]`
   Ng, S., Masarone, S., Watson, D., & Barnes, M. R. (2023).
@@ -156,10 +157,57 @@ The literature used in this course
   *Cell and Tissue Research, 394*, 17 - 31.
   <https://doi.org/10.1007/s00441-023-03816-z>
 
-???- info "Summary of `[[Ng et al., 2023]]`"
+???- info "Summary of `[Ng et al., 2023]`"
+
+    This paper makes the case for explainable AI
+    and illustrates this with a case study.
 
     ...
 
+    It demonstrates how to setup a machine-learning experiment:
+
+    ![Figure 2 from Ng et al., 2023](ng_et_al_2023_fig_2.png)
+
+    It also describes how to evaluate the performance of a supervised
+    machine learning model:
+
+    - Accuracy or F1 score
+    - Receiver-operator-characteristic ('ROC') score
+
+    Problem is that the interpretation of the results is harder too do.
+
+    The paper also mentions the problem that there are many more dimensions
+    in the data as there are patients.
+
+    The paper makes the case for Explainable AI (XAI). There are two
+    approaches:
+
+    - intrinsic XAI methods: uses only methods that can explain their findings,
+      such as linear regression, logistic regression and decision trees
+    - post-hoc XAI: explain findings of other methods
+
+    The paper has a section called 'Correlation or causation?',
+    about C-reactive protein (CRP) as a biomarker. Its relation
+    to cardiovascular disease was unclear. It correlated with
+    the disease and was used as an inflammatory biomarker
+    (this doubt was already present in 1999).
+    Later research showed that this protein reaches higher levels
+    before (and during) the disease and is since 2000 used as a 
+    predictor biomarker.
+
+    The paper describes a study of asthma with multiple endotypes (i.e.
+    different pathways to reach the same phenotypes) that will need
+    different types of treatments.
+
+    The paper supplies [a Jupyer notebook](https://github.com/C4TB/CTR_XAI)
+    on a single-omics dataset
+    and compare the differences of PCA and t-SNE:
+
+    ![Notebook PCA](ng_et_al_2023_jupyter_notebook_pca.png)
+
+    ![Notebook t-SNE](ng_et_al_2023_jupyter_notebook_t_sne.png)
+
+<!-- Njume et al., 2026 ------------------------------------------------------->
 
 - :material-lock-open-variant:{ style="color: #F47D20;" } `[Njume et al., 2026]`
   Njume, C. M., Petracci, I., Bellini, S., Goljanek‐Whysall, K., Quinlan, L. R.,
@@ -199,6 +247,8 @@ The literature used in this course
     Code at [its GitHub repository](https://github.com/itu-bioinformatics-database-lab/biomarker-benchmark)
 
 
+<!-- Prentice, 1989 ----------------------------------------------------------->
+
 - `[Prentice, 1989]` Prentice, Ross L.
   "Surrogate endpoints in clinical trials: definition and operational criteria."
   Statistics in medicine 8.4 (1989): 431-440.
@@ -211,6 +261,8 @@ The literature used in this course
     real surrogate for the clinical outcome)
 
     It is called 'a classic work' by `[Califf, 2018]`.
+
+<!-- Rifai et al., 2006 ------------------------------------------------------->
 
 - :material-lock:{ style="color: #757575;" } `[Rifai et al., 2006]`
   Rifai, N., Gillette, M., & Carr, S. (2006).
@@ -226,11 +278,14 @@ The literature used in this course
     of human clinical samples,
     with a focus on lab work.
 
+<!-- Zhang et al., 2025 ------------------------------------------------------->
+
 - `[Zhang et al., 2025]`
   Zhang, Xinyang, Ali Rahnavard, and Keith A. Crandall. 
   "Machine learning enhances biomarker discovery:
   From multi-omics to functional genomics." Medical Research Archives 8 (2025).
   [DOI](https://doi.org/10.18103/mra.v13i8.6888)
+
 
 ???- info "Summary of `[Zhang et al., 2025]`"
 

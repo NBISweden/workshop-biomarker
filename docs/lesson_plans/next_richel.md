@@ -382,5 +382,26 @@ Good, I will read, in this order:
 - `[Ng et al., 2023]`
 - `[Dhillon et al., 2022]`
 
-## References
+An idea:
 
+- `[Ng et al., 2023]`, in 'Correlation or causation?'
+  describes a study of a biomarker that had an unsure status as a biomarker,
+  which in 2000 was determined it was predictive
+
+What can I learn from earlier course evaluations?
+
+- [->] Ask Prasoon for earlier course evaluations
+
+Questions to Prasoon:
+
+- [ ] Where is all the other course material (i.e. that not in the GitHub
+  repository)? Can I upload it?
+- [ ] Could I have the earlier course evaluations?
+- [ ] Will the course use only multi-omics datasets
+  (i.e. and not use single-omics)?
+- [ ] Does the course teach how to verify and validate a biomarker?
+  The title states only 'Discovery', not these two next steps
+- [ ] Where is the course? Online, in real life, of hybrid?
+- [ ] Do you agree to limit lectures to 10 minutes? If not, which length?
+
+Asked.

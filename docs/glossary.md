@@ -1,5 +1,11 @@
 # Glossary
 
+An overview of definitions and abbreviations.
+
+## Biomarker
+
+'A biomarker is a measurable characteristic that reflects the
+physiological or pathological state of an organism' `[Ng et al., 2023]`
 
 ## Diagnostic biomarker 
 
@@ -7,6 +13,16 @@
 disease or condition of interest, or identifies an individual
 with a subtype of the disease'
 (inaccessible reference 3 from `[Califf, 2018]`).
+
+## Endotype
+
+An endotype is one of many biological features and/or pathways
+to achieve the same phenotype.
+
+'Although patients may clinically manifest in a similar man-
+ner, an **endotype** defines a subgroup of patients who share a
+common underlying biology or pathway mechanism, which
+drives the manifestation of the disease or phenotype' `[Ng et al., 2023]`
 
 ## Prognostic biomarkers
 

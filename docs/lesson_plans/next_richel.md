@@ -1,5 +1,11 @@
 # Lesson plan
 
+<!-- markdownlint-disable MD004 -->
+<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD026 -->
+<!-- markdownlint-disable MD034 -->
+<!-- markdownlint-disable MD049 -->
+
 - Author: Richel
 
 Here I keep my notes for preparing the next course iteration.
@@ -92,7 +98,7 @@ I start with the most recent paper.
 
 ???- question "Answer from Consensus"
 
-    # Evidence-based best practices require **prospective study design**, robust quality control, and **multicohort validation**.
+    ## Evidence-based best practices require **prospective study design**, robust quality control, and **multicohort validation**.
 
     Evidence-based biomarker discovery relies on structured multi-phase frameworks spanning early candidate selection to analytical validation and independent clinical qualification (Nakayasu et al., 2021; Rifai et al., 2006; Califf, 2018). Translating initial omics or mass-spectrometry findings into reliable clinical assays requires strict adherence to statistical rigor, standardized sample handling, and pre-specified contexts of use (Nakayasu et al., 2021; Ahmad et al., 2023; Fernandez-Metzler et al., 2022).
 

@@ -129,8 +129,8 @@ The literature used in this course
     For analytical validation one needs to establish:
 
     - precision
-      - measure of repeatability, i.e. within-day variability
-      - measure of reproducibility, i.e. day-to-day variabilty
+        - measure of repeatability, i.e. within-day variability
+        - measure of reproducibility, i.e. day-to-day variabilty
     - speciﬁcity
     - sensitivity
     - recovery

@@ -30,6 +30,26 @@ The literature used in this course
 
     ![Redrawn after figure 1 of Califf, 2018](califf_2018_fig_1.svg)
 
+
+- `[MacLean et al., 2019]`
+  MacLean, Emily, et al. 
+  "A systematic review of biomarkers to detect active tuberculosis."
+  Nature microbiology 4.5 (2019): 748-758.
+
+???- info "Summary of `[MacLean et al., 2019]`"
+
+    This study investigated 7631 tuberculosis biomarker papers
+    and mention these as the problems for reproducibility:
+
+    - most studies had a small size, i.e. they were underpowered
+    - control groups were inappropriate
+    - a significant p-value was used to validate a finding, instead
+      of validation experiments
+    - the blindedness (as in 'single-blinded') of an experiment
+      was not mentioned
+
+    discovery, veriﬁcation and validation
+
 - :material-lock:{ style="color: #757575;" } `[Nakayasu et al., 2021]`
   Nakayasu, E., Gritsenko, M., Piehowski, P.,
   Gao, Y.-Q., Orton, D., Schepmoes, A., Fillmore, T., Frohnert, B.,
@@ -40,9 +60,45 @@ The literature used in this course
   *Nature protocols, 16*, 3737 - 3760.
   <https://doi.org/10.1038/s41596-021-00566-6>
 
-???- info "Summary"
+???- info "Summary of `[Nakayasu et al., 2021]`"
 
-    Unsure if this is relevant
+    This paper describes how to design and implementing a
+    liquid-chromatography-mass-spectrometry-based biomarker discovery,
+    with a focus on lab-work.
+
+    There are three phases in biomarker discovery:
+
+    Phase|Name
+    -----|----------------------------------------------------------
+    1    |Discovery
+    2    |Verification
+    3.1  |Validation step 1: analytical validation
+    3.2  |Validation step 2: clinical validation, aka qualification
+
+    ![Figure 1 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_1.png)
+
+    For analytical validation one needs to establish:
+
+    - precision
+      - measure of repeatability, i.e. within-day variability
+      - measure of reproducibility, i.e. day-to-day variabilty
+    - speciﬁcity
+    - sensitivity
+    - recovery
+    - stability
+
+    ![Figure 2 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_2.png)
+
+    ![Figure 5 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_5.png)
+
+    One of my favorite figures is the effect of cleaning your
+    equipment. The authors of this paper, in their lab, run a same
+    sample before and/or after each run, in which less and less peptides
+    get detected. If the threshold is too low, the machine is cleaned and
+    its sensitivity increases:
+
+    ![Figure 3 of Nakayasu et al., 2021](nakayasu_et_al_2016_fig_3.png)
+
 
 - :material-lock:{ style="color: #757575;" } `[Rifai et al., 2006]`
   Rifai, N., Gillette, M., & Carr, S. (2006).

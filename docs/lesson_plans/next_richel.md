@@ -408,7 +408,7 @@ Asked.
 
 I do like the recent paper:
 
-- Ögren, J.Å., Ekström, J., Rameika, N. et al. Composite proteomic and metabolomic plasma biomarkers for detection of colorectal, lung and ovarian cancers. Mol Cancer 25, 105 (2026). https://doi.org/10.1186/s12943-026-02654-1
+- Ögren, J.Å., Ekström, J., Rameika, N. et al. Composite proteomic and metabolomic plasma biomarkers for detection of colorectal, lung and ovarian cancers. Mol Cancer 25, 105 (2026). <https://doi.org/10.1186/s12943-026-02654-1>
 
 It has a nice public multi-modal dataset, with +400 markers and +900 patients.
 

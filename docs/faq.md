@@ -49,6 +49,33 @@ This is undecided yet.
 ## About the course prerequisites
 
 
+## Registration if course is online
+
+!!! warning "It is not yet decided if the course will be online"
+
+### How do I register?
+
+...
+
+### How much does it cost?
+
+1000 SEK
+
+
+
+### When do I receive my invoice?
+
+Invoices of course fees will be sent 6 weeks in advance
+of the first day of the course.
+
+### I want to cancel the course and have have not yet paid the invoice. Must I still pay the invoice?
+
+???
+
+### I have paid my invoice and want to cancel. Is this possible?
+
+No
+
 ## Teaching
 
 ### How is the course designed?

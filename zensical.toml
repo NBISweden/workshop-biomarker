@@ -9,6 +9,7 @@ nav = [
   "faq.md",
   "communication.md",
   {"Misc" = [
+     "course_material.md",
      "lesson_plans/README.md",
      "literature/README.md",
      "meeting_notes/README.md"

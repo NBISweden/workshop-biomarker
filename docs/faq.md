@@ -62,7 +62,6 @@ This is undecided yet.
 1000 SEK
 
 
-
 ### When do I receive my invoice?
 
 Invoices of course fees will be sent 6 weeks in advance
